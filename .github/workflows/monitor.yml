@@ -1,0 +1,60 @@
+name: Monitor
+
+on:
+  schedule:
+    # 22:07 UTC = 07:07 JST (next day) — morning summary push
+    - cron: '7 22 * * *'
+  workflow_dispatch:
+    inputs:
+      reset_simulate:
+        description: 'Reset state.json and run --simulate-init (will push newest 1 of each source)'
+        type: boolean
+        default: false
+
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - run: uv sync --frozen
+
+      - name: Reset state (simulate-init test)
+        if: ${{ inputs.reset_simulate }}
+        run: rm -f state.json
+
+      - name: Simulate-init seed (skip newest 1)
+        if: ${{ inputs.reset_simulate }}
+        run: uv run monitor.py --simulate-init
+
+      - name: Run monitor
+        run: uv run monitor.py
+
+      - name: Commit state.json
+        run: |
+          if [ ! -f state.json ]; then
+            echo "no state.json produced, skipping commit"
+            exit 0
+          fi
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add -f state.json
+          if git diff --staged --quiet; then
+            echo "state.json unchanged, skipping commit"
+            exit 0
+          fi
+          git commit -m "chore: update state.json [skip ci]"
+          git push
