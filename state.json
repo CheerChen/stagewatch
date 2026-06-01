@@ -161,7 +161,7 @@
       "https://www.jvcmusic.co.jp/flyingdog/-/News/A008957/1318.html",
       "https://www.jvcmusic.co.jp/flyingdog/-/News/A008957/1319.html"
     ],
-    "last_run": "2026-05-31T22:29:24+00:00"
+    "last_run": "2026-06-01T22:49:31+00:00"
   },
   "YENA": {
     "initialized": true,
@@ -182,7 +182,7 @@
       "https://www.jvcmusic.co.jp/-/News/A029411/19.html",
       "https://www.jvcmusic.co.jp/-/News/A029411/20.html"
     ],
-    "last_run": "2026-05-31T22:29:25+00:00"
+    "last_run": "2026-06-01T22:49:33+00:00"
   },
   "マクロスF": {
     "initialized": true,
@@ -198,7 +198,7 @@
       "https://www.jvcmusic.co.jp/flyingdog/-/News2/Z0221/76.html",
       "https://www.jvcmusic.co.jp/flyingdog/-/News2/Z0221/86.html"
     ],
-    "last_run": "2026-05-31T22:29:26+00:00"
+    "last_run": "2026-06-01T22:49:34+00:00"
   },
   "RYTHEM": {
     "initialized": true,
@@ -233,7 +233,7 @@
       "yuiyui:e83892487712",
       "yuiyui:e91da92d5b31"
     ],
-    "last_run": "2026-05-31T22:29:27+00:00"
+    "last_run": "2026-06-01T22:49:35+00:00"
   },
   "Perfume Live": {
     "initialized": true,
@@ -249,7 +249,7 @@
       "https://www.perfume-web.jp/news/detail.php?id=4201&lcid=3",
       "https://www.perfume-web.jp/news/detail.php?id=4270&lcid=3"
     ],
-    "last_run": "2026-05-31T22:29:27+00:00"
+    "last_run": "2026-06-01T22:49:36+00:00"
   },
   "水樹奈々": {
     "initialized": true,
@@ -355,9 +355,10 @@
       "mizuki:2488",
       "mizuki:2584",
       "mizuki:2585",
-      "mizuki:2586"
+      "mizuki:2586",
+      "mizuki:2587"
     ],
-    "last_run": "2026-05-31T22:29:28+00:00"
+    "last_run": "2026-06-01T22:49:38+00:00"
   },
   "KOTOKO": {
     "initialized": true,
@@ -383,7 +384,7 @@
       "https://nbcuni-music.com/kotoko/news/index03200000.html",
       "https://nbcuni-music.com/kotoko/news/index03390000.html"
     ],
-    "last_run": "2026-05-31T22:29:29+00:00"
+    "last_run": "2026-06-01T22:49:38+00:00"
   },
   "TWICE Live": {
     "initialized": true,
@@ -399,7 +400,7 @@
       "https://www.twicejapan.com/news/detail/1795",
       "https://www.twicejapan.com/news/detail/1925"
     ],
-    "last_run": "2026-05-31T22:29:29+00:00"
+    "last_run": "2026-06-01T22:49:39+00:00"
   },
   "AQUAPLUS Event (WHITE ALBUM)": {
     "initialized": true,
@@ -409,6 +410,6 @@
       "https://blog.aquaplus.jp/archives/12322",
       "https://blog.aquaplus.jp/archives/12746"
     ],
-    "last_run": "2026-05-31T22:29:30+00:00"
+    "last_run": "2026-06-01T22:49:40+00:00"
   }
 }
